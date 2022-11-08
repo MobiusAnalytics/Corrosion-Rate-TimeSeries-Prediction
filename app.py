@@ -97,7 +97,7 @@ if authetication_status:
             st.markdown("Table: Predicted Corrosion Rates for requested future days")            
             st.write(predictions)
             predictions =predictions.to_csv(index=True).encode('utf-8')
-            st.download_button(label='Download CSV',data=predictions,mime='text/csv',file_name='Download.csv')    
+            st.download_button(label='Download Prediction(csv)',data=predictions,mime='text/csv',file_name='Download.csv')    
             chart_data = future_df[['Corrosion rate','Forecasted Corrosion Rate']]
             
             st.markdown("Lineplot showing Actual vs Predicted Corrosion Rate")
